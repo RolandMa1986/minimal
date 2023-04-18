@@ -4,6 +4,8 @@
 
 set -e
 
+sudo apt-get -qq -y update
+sudo apt-get -qq -y upgrade
 sudo apt-get -qq -y install wget make gawk gcc bc xz-utils bison flex xorriso libelf-dev libssl-dev
 
 cd ../src

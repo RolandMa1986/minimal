@@ -1,0 +1,16 @@
+name: 'MLL Release'
+on: 'workflow_dispatch'
+jobs:
+  mll-with-tests:
+    runs-on: 'ubuntu-22.04'    # revert back to 'ubuntu-latest' when 22.04 is no longer in public beta
+    steps:
+    - uses: actions/checkout@v2    
+    - name: 'Apply Workflow Patches'
+      run: |
+        cd .github
+        bash ./build_mll.sh
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: minimal_linux_live.iso
+        path: ../src/minimal_linux_live.iso
