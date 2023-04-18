@@ -13,4 +13,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: minimal_linux_live.iso
-        path: ../src/minimal_linux_live.iso
+        path: src/minimal_linux_live.iso
